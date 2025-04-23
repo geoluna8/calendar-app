@@ -1,4 +1,4 @@
-# React + Vite
+# Calendar App - React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -21,3 +21,4 @@ If you are developing a production application, we recommend using TypeScript an
     - npm i sweetalert2
 - npm install @reduxjs/toolkit
 - npm install react-redux
+- npm install axios
