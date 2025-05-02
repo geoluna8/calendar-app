@@ -12,6 +12,7 @@ import { useUiStore } from "../../hooks/useUiStore";
 
 import es from 'date-fns/locale/es';
 import { useCalendarStore } from "../../hooks";
+import { getEnvVariables } from "../../helpers";
 registerLocale('es', es);
 
 const customStyles = {
@@ -25,7 +26,9 @@ const customStyles = {
     },
   };
 
+  if ( getEnvVariables().VITE_MODE !== 'test' ) {
   ReactModal.setAppElement('#root');
+  }
 
 
 export const CalendarModal = () => {

@@ -22,3 +22,14 @@ If you are developing a production application, we recommend using TypeScript an
 - npm install @reduxjs/toolkit
 - npm install react-redux
 - npm install axios
+
+- Testing
+    - npm install --dev jest babel-jest @babel/preset-env @babel/preset-react
+    - npm install --dev @testing-library/react @types/jest jest-environment-jsdom
+    - package.json scripts => "test": "jest --watchAll"
+    - Crear archivo babel.config.js
+        - export default { presets: [ [ '@babel/preset-env', { targets: { esmodules: true } } ], [ '@babel/preset-react', { runtime: 'automatic' } ], ], };
+        - Crear archivo jest.config.js
+            export default { testEnvironment: 'jest-environment-jsdom', setupFiles: ['./jest.setup.js'] }
+        - Crear jest.setup.js
+            - npm i -D dotenv
